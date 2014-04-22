@@ -72,8 +72,8 @@ class Example(QtGui.QMainWindow):
         paint.drawRect(QtCore.QRect())
 
         # Render particles
-        for i in range(len(self.physics.particles)):
-            particle = self.physics.particles[i]
+        for particle in self.physics.particles:
+            #particle = self.physics.particles[i]
             center = QtCore.QPoint(particle.pos._x, particle.pos._y)
             paint.setBrush(particle.colour)
             paint.drawEllipse(center, particle.radius, particle.radius)
